@@ -1,0 +1,444 @@
+/* Explicit sources instead of a whole-project scan.
+   By default Tailwind walks up to the project root looking for class names,
+   which means any junk directory in the project (a browser profile, a cache)
+   gets read on every CSS pass and can crash the build when a file in it is
+   locked. Scanning only `src/` is deterministic and much faster. */
+@import "tailwindcss" source(none);
+@import "../styles/tokens.css";
+
+@source "../../src";
+
+/* ============================================================================
+   Custom variants
+   Hover motion must be gated: touch devices fire hover on tap.
+   ========================================================================= */
+
+@custom-variant hoverable (@media (hover: hover) and (pointer: fine));
+@custom-variant coarse (@media (hover: none) and (pointer: coarse));
+
+/* ============================================================================
+   Base
+   ========================================================================= */
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scrollbar-gutter: stable;
+  }
+
+  body {
+    background-color: var(--color-ink-950);
+    color: var(--color-paper);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: clip;
+  }
+
+  /* Lenis owns scrolling; it sets these itself when active. */
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    text-wrap: balance;
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+    text-wrap: pretty;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: 0;
+    cursor: pointer;
+  }
+
+  input,
+  select,
+  textarea {
+    font: inherit;
+    color: inherit;
+  }
+
+  img,
+  video,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  /* Visible, on-brand focus ring. Never remove focus indication. */
+  :focus-visible {
+    outline: 2px solid var(--color-flare);
+    outline-offset: 3px;
+    border-radius: var(--radius-xs);
+  }
+
+  ::selection {
+    background: var(--color-flare);
+    color: var(--color-ink-950);
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-ink-900);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-ink-600);
+    border-radius: var(--radius-pill);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-ink-500);
+  }
+}
+
+/* ============================================================================
+   Components — the small set of shared patterns
+   ========================================================================= */
+
+@layer components {
+  /* Page shell ---------------------------------------------------------- */
+  .shell {
+    width: 100%;
+    max-width: var(--shell-max);
+    margin-inline: auto;
+    padding-inline: var(--shell-pad);
+  }
+
+  .shell-wide {
+    width: 100%;
+    max-width: 120rem;
+    margin-inline: auto;
+    padding-inline: var(--shell-pad);
+  }
+
+  .section-y {
+    padding-block: var(--section-y);
+  }
+
+  /* Typography helpers -------------------------------------------------- */
+  .u-display {
+    font-family: var(--font-display);
+    font-stretch: 118%;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  .u-eyebrow {
+    font-family: var(--font-mono);
+    font-size: var(--text-micro);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--color-ash);
+  }
+
+  /* Measure: 65–75ch is the readable band. */
+  .u-measure {
+    max-width: 62ch;
+  }
+  .u-measure-tight {
+    max-width: 46ch;
+  }
+
+  /* Hairlines ----------------------------------------------------------- */
+  .u-rule {
+    border: 0;
+    border-top: 1px solid var(--line);
+    margin: 0;
+  }
+  .u-rule-paper {
+    border: 0;
+    border-top: 1px solid var(--line-paper);
+    margin: 0;
+  }
+
+  /* Grain — a real film-texture, not a decorative gradient ------------- */
+  .u-grain::after {
+    content: "";
+    position: absolute;
+    inset: -50%;
+    pointer-events: none;
+    opacity: 0.05;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+    animation: var(--animate-grain);
+    will-change: transform;
+  }
+
+  /* Eliminate 300ms mobile tap delay globally on all interactive elements */
+  button,
+  a,
+  input,
+  select,
+  textarea,
+  [role="button"],
+  [role="slider"] {
+    touch-action: manipulation;
+  }
+
+  /* Pressable: zero-latency 40ms pointer-down response, 160ms release settle */
+  .u-press {
+    touch-action: manipulation;
+    transition: transform 160ms var(--ease-swift);
+    will-change: transform;
+  }
+  .u-press:active:not(:disabled):not([aria-disabled="true"]) {
+    transform: scale(0.97);
+    transition-duration: 40ms;
+  }
+
+  /* ==========================================================================
+     Entrances used by the layout chrome.
+
+     These are one-shot keyframe animations rather than transitions on
+     purpose. The reduced-motion block at the bottom of this file neutralises
+     `transition-duration`, which would leave a transition mid-flight with the
+     element stuck in its hidden state; a one-shot animation instead lands on
+     its `to` frame and the element is simply there. Each utility still drops
+     the travel under reduced motion, keeping only opacity.
+
+     The `@keyframes` themselves live after this block, at the top level,
+     because `@keyframes` are global and do not belong to a cascade layer.
+     ======================================================================== */
+
+  /* Drawer panel — wipes down from above on the iOS drawer curve. */
+  .u-drawer-panel {
+    transform: translateY(-100%);
+    animation: drawer-panel var(--dur-panel) var(--ease-drawer) both;
+  }
+
+  /* Drawer backdrop — fade only, it never moves. */
+  .u-drawer-backdrop {
+    animation: drawer-backdrop var(--dur-panel) var(--ease-soft) both;
+  }
+
+  /* Drawer nav item — set `--drawer-delay` to stagger (40ms per item). */
+  .u-drawer-item {
+    animation: drawer-item var(--dur-panel) var(--ease-swift) both;
+    animation-delay: var(--drawer-delay, 0ms);
+  }
+
+  /* Route enter. Kept on the compositor; nothing waits for it. */
+  .u-page-enter {
+    animation: page-enter var(--dur-panel) var(--ease-swift) both;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Keyframes for the chrome entrances above.
+   ------------------------------------------------------------------------ */
+
+@keyframes drawer-panel {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes drawer-backdrop {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes drawer-item {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 10px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, var(--page-shift, 8px), 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* ============================================================================
+   Utilities
+   ========================================================================= */
+
+@utility text-stroke {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--color-ash);
+}
+
+@utility text-stroke-flare {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--color-flare);
+}
+
+/* Horizontal scroll region with matching end gutters (slop rule). */
+@utility rail {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-inline: var(--shell-pad);
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+@utility rail-item {
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+}
+
+/* ============================================================================
+   Entrance primitives — progressive enhancement
+   ----------------------------------------------------------------------------
+   Content is VISIBLE by default. Only a browser that has confirmed JavaScript
+   hides it and animates it in, and that confirmation is written by a
+   synchronous inline script in <body> that runs before first paint.
+
+   Why: if the entrances hid content in the server-rendered markup, then a
+   blocked or failed script, a hydration error, or a slow connection would
+   leave the entire page invisible. A marketing site must never need
+   JavaScript to be readable. This way the no-JS and JS-failed experience is
+   the finished layout, simply without motion.
+
+   These rules are intentionally UNLAYERED so they outrank layered utilities.
+   ========================================================================= */
+
+.reveal {
+  transition-property: opacity, transform, translate, filter;
+  transition-duration: var(--dur-reveal);
+  transition-timing-function: var(--ease-swift);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+html[data-js="on"] .reveal[data-reveal="off"] {
+  opacity: 0;
+  transform: translateY(var(--reveal-shift, 14px));
+}
+
+html[data-js="on"] .reveal[data-reveal="off"].reveal-blur {
+  filter: blur(2px);
+}
+
+/* One clip box per word, sized from the same metrics as the line box.
+   Top allowance only: uppercase display type has no descenders, and the equal
+   negative margin means line spacing is exactly what the type scale says. */
+.split-mask {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  padding-block-start: 0.1em;
+  margin-block-start: -0.1em;
+}
+
+.split-word {
+  display: inline-block;
+  transition-property: opacity, transform;
+  transition-duration: var(--dur-reveal);
+  transition-timing-function: var(--ease-swift);
+  transition-delay: var(--split-delay, 0ms);
+}
+
+/* 115% clears the word's own box plus the mask's top allowance. */
+html[data-js="on"] .split[data-split="off"] .split-word {
+  opacity: 0;
+  transform: translate3d(0, 115%, 0);
+}
+
+/* Opt-out for reduced motion: no mask clipping, words simply present. */
+html[data-js="on"] .split.split-static .split-mask {
+  overflow: visible;
+}
+
+/* Reduce, do not zero: the fade stays, the travel goes. */
+@media (prefers-reduced-motion: reduce) {
+  html[data-js="on"] .reveal[data-reveal="off"] {
+    transform: none;
+    filter: none;
+  }
+
+  html[data-js="on"] .split[data-split="off"] .split-word {
+    transform: none;
+    clip-path: none;
+  }
+
+  html[data-js="on"] .split .split-mask {
+    overflow: visible;
+  }
+}
+
+/* ============================================================================
+   Reduced motion — reduce, do not zero. Opacity stays, movement goes.
+   ========================================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .u-grain::after {
+    animation: none !important;
+  }
+}
+
+/* The chrome entrances lose their travel and their stagger, and keep the
+   fade. A 0.01ms one-shot animation still lands on its `to` frame, so the
+   element ends up visible — it simply does not move to get there. */
+@media (prefers-reduced-motion: reduce) {
+  .u-drawer-panel,
+  .u-drawer-item,
+  .u-page-enter {
+    --page-shift: 0px;
+    --drawer-delay: 0ms;
+  }
+}

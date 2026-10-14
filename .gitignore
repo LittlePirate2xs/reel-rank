@@ -1,0 +1,55 @@
+# dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# next
+.next/
+out/
+build/
+next-env.d.ts
+
+# production
+dist/
+
+# env
+.env
+.env*.local
+
+# local inquiry outbox — contains real briefs, never commit it
+.inquiry-outbox/
+
+# agent & test artifacts
+.agents/
+.test-results.json
+
+# npm cache kept inside the workspace (sandbox constraint)
+.npm-cache/
+
+# Headless Chrome profiles used by scripts/audit-visual.mjs.
+# These are ignored so Tailwind's source scanner and Turbopack skip them.
+# Note: the DSH sandbox denies DeleteSubdirectoriesAndFiles to Everyone, so
+# these folders cannot be removed from a confined session. They are inert.
+.chrome-cdp/
+.chrome-profile/
+
+# Visual audit output from scripts/audit-visual.mjs
+shots/
+
+# ACL recovery reports from the sandbox diagnostics skill
+acl-recovery/
+
+# editors / os
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+
+# logs
+*.log
+npm-debug.log*
+
+# typescript
+*.tsbuildinfo

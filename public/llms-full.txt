@@ -1,0 +1,222 @@
+# Reel & Rank — Full Studio Specification
+
+> Reel & Rank is a three-person motion, video and search studio in Houston. Motion graphics, video ads, selling campaigns and SEO, GEO and AEO strategy. Drop an idea and get an initial example in one day.
+
+## 1. Studio Identification & Knowledge Graph
+- **Studio Name:** Reel & Rank
+- **Entity Type:** ProfessionalService / LocalBusiness
+- **Geographic Coordinates:** Latitude 29.7604, Longitude -95.3698
+- **Physical Headquarters:** Houston, Texas, USA
+- **Founder & Creative Technologist:** Manny Singh
+- **Founder Corporate History:** Salesforce, United Airlines, Morgan Stanley, Banco Santander
+- **Founder Profiles:** https://www.linkedin.com/in/mannysingh
+- **Primary Email:** hello@reelandrank.com
+- **Primary Website:** https://reelandrank.com
+- **Team Composition:** Dedicated three-person studio (Creative Direction, Motion Design, Editing/Grading)
+
+## 2. Definitional Answer Summary
+Reel & Rank is a Houston, Texas motion graphics, video advertising, and search strategy studio offering transparent, flat-rate pricing from $250 to $2,000+. Engagements include three-piece motion graphics sets ($250), 15-second ads ($500), 60-second commercials ($1,000), search optimization (SEO/GEO/AEO from $1,000), and full selling campaigns ($2,000+), each with an initial creative draft in one working day.
+
+## 3. Detailed Offer Catalog & Deliverables
+
+### Motion graphics, set of three ($250)
+- **Slug:** motion-graphics-set
+- **Tier:** entry
+- **Rate:** $250 (set of 3)
+- **Starting Price (USD):** $250
+- **Turnaround Commitment:** Initial example in one day
+- **Best Suited For:** A launch, a product drop, or a message that needs to move.
+- **Direct Answer Definition:** The Motion Graphics Set from Houston studio Reel & Rank delivers three synchronized motion graphics assets for a flat rate of $250. Designed for product drops and social campaigns, deliverables include custom aspect ratios, agreed visual hooks, and one refinement round, with an initial draft delivered in one working day.
+- **Itemized Deliverables:**
+  - Three motion graphics, agreed as a set
+  - Formats and aspect ratios confirmed with the brief
+  - One round of refinement inside the agreed direction
+- **Contractual Commitments:**
+  - We agree the brief, deliverables, formats and timing before production starts.
+
+### 15-second advertisement ($500)
+- **Slug:** fifteen-second-ad
+- **Tier:** entry
+- **Rate:** $500 (advertisement)
+- **Starting Price (USD):** $500
+- **Turnaround Commitment:** Initial example in one day
+- **Best Suited For:** Paid social, pre-roll and a first impression that has to land fast.
+- **Direct Answer Definition:** Reel & Rank's 15-second advertisement package is a flat-rate $500 commercial production designed for high-impact paid social, pre-roll, and mobile video feeds. Based in Houston, Texas, the studio delivers a focused creative direction, script structure, and iterative revisions until client approval, with an initial reviewable draft ready within one working day.
+- **Itemized Deliverables:**
+  - One 15-second advertisement
+  - Clear concept and creative direction
+  - Refined with your feedback until you are happy with it
+- **Contractual Commitments:**
+  - We agree the brief, deliverables, formats and timing before production starts.
+  - For the two advertisement offers we refine the agreed creative direction with your feedback until you are happy with the final result. New concepts or an expanded brief are discussed together.
+
+### Advertisement up to one minute ($1,000)
+- **Slug:** sixty-second-ad
+- **Tier:** entry
+- **Rate:** $1,000 (advertisement)
+- **Starting Price (USD):** $1000
+- **Turnaround Commitment:** Initial example in one day
+- **Best Suited For:** A brand story, a founder film, or a product that needs explaining.
+- **Direct Answer Definition:** Reel & Rank's 60-second advertisement package provides full-length commercial production for $1,000, tailored for brand storytelling, founder narratives, and complex product launches. Created by a three-person Houston creative studio, every project features complete narrative pacing, sound design, and unlimited feedback refinement within the agreed direction, starting with a first draft within one day.
+- **Itemized Deliverables:**
+  - One advertisement, up to 60 seconds
+  - Story structure and creative direction
+  - Refined with your feedback until you are happy with it
+- **Contractual Commitments:**
+  - We agree the brief, deliverables, formats and timing before production starts.
+  - For the two advertisement offers we refine the agreed creative direction with your feedback until you are happy with the final result. New concepts or an expanded brief are discussed together.
+
+### Search visibility: SEO, GEO and AEO (From $1,000)
+- **Slug:** search-visibility
+- **Tier:** flagship
+- **Rate:** From $1,000 (strategy and dashboard)
+- **Starting Price (USD):** $1000
+- **Turnaround Commitment:** Scope agreed on a call
+- **Best Suited For:** Businesses that want to be found in search and in AI answers.
+- **Direct Answer Definition:** Search Visibility from Reel & Rank is a comprehensive $1,000+ optimization engagement uniting search engine optimization (SEO), generative engine optimization (GEO), and answer engine optimization (AEO). The Houston studio establishes search entity authority across Google, ChatGPT, and Perplexity, providing bespoke technical execution alongside a custom metrics tracking dashboard tailored to agreed client goals.
+- **Itemized Deliverables:**
+  - SEO · Search engine optimization
+  - GEO · Generative engine optimization
+  - AEO · Answer engine optimization
+  - A dashboard covering the agreed measures
+  - A scope and priorities call before work starts
+- **Contractual Commitments:**
+  - We define the priorities, the agreed deliverables and how progress will be tracked.
+  - We deliver the strategy and dashboard we agree on.
+- **Disclaimers:**
+  - Search rankings, traffic, AI citations and sales are not guaranteed.
+
+### Selling campaign (From $2,000)
+- **Slug:** selling-campaign
+- **Tier:** flagship
+- **Rate:** From $2,000 (campaign)
+- **Starting Price (USD):** $2000
+- **Turnaround Commitment:** Scope agreed in a call
+- **Best Suited For:** A launch, a season, or a push that needs more than one piece.
+- **Direct Answer Definition:** Reel & Rank's Selling Campaign is a multi-channel creative service starting at $2,000 designed to unite messaging, target audience, and video production into a cohesive launch. Guided by founder Manny Singh from Houston, the studio scopes cross-platform deliverables, formats, and creative directions before production, guaranteeing clear contractual alignment and transparent pricing.
+- **Itemized Deliverables:**
+  - A connected campaign across the agreed channels
+  - Message, audience and creative direction joined into one idea
+  - Scope, channels and deliverables agreed in writing first
+- **Contractual Commitments:**
+  - Scope, channels and deliverables are agreed around your goals before work starts.
+- **Disclaimers:**
+  - Media buying and ad spend are not included unless separately agreed.
+  - We do not promise a particular sales result.
+
+## 4. Career Packages (Mentorship by Manny Singh)
+
+### Interview video ($500)
+- **Rate:** $500 (package)
+- **Tagline:** Put your story on screen.
+- **Summary:** An interview video that helps you present your experience, your strengths and your professional story.
+- **Inclusions:**
+  - Interview video
+
+### Résumé, video and portfolio ($1,000)
+- **Rate:** $1,000 (package)
+- **Tagline:** Bring your experience together.
+- **Summary:** A coordinated presentation of your experience: résumé editing, an interview video and a work portfolio.
+- **Inclusions:**
+  - Résumé editing
+  - Interview video
+  - Work portfolio creation
+
+### Complete career package ($1,500)
+- **Rate:** $1,500 (package)
+- **Tagline:** Show up ready for what is next.
+- **Summary:** Everything in the $1,000 package, plus tech and AI job interview preparation with Manny, a tech entrepreneur. We work together through video calls and on-site sessions by arrangement.
+- **Inclusions:**
+  - Résumé editing
+  - Interview video
+  - Work portfolio creation
+  - Tech and AI job interview preparation with a tech entrepreneur
+
+### Career Mentorship Commitments
+- **Guarantee:** I will keep working with you until you get a job, with ongoing consultations and strategy adjustments at no additional charge in the $1,500 package.
+- **Disclaimer:** Hiring decisions remain with employers. We do not guarantee a job offer or salary.
+- **Scope Protocol:** We discuss your goals and agree the scope, deliverables and timing before work starts.
+- **Mentor Background:** I have worked for Salesforce, United Airlines, Banco Santander and Morgan Stanley. I have worked on government contracts and in logistics, and I have led technology teams. Your experience deserves to be heard and your work deserves to be seen. Let us tell your story in a way that feels like you, and helps people understand what you bring. Your next chapter is worth getting excited about.
+
+## 5. Portfolio & Provenance Policy
+All featured work on the site represents **RamanRasa**, founder Manny Singh's personal brand.
+It is AI-assisted creative produced to showcase aesthetic craftsmanship, pacing, and motion graphics design. It is explicitly presented as portfolio creative rather than paid client testimonials or performance marketing case studies.
+
+### Selected Portfolio Projects
+#### Flavors Chase Me (2025)
+- **Category:** campaign
+- **Hook:** I don't chase flavour. Flavour chases me.
+- **Summary:** A character, a world and one very bold idea. Spice Man walks through a series of unexpected scenes, each one built around a single flavour and a single punchline. Eight films, one creative world.
+- **Services Rendered:** Creative direction, Campaign storytelling, Character world-building, Short-form film series
+- **Provenance Credit:** RamanRasa · founder-owned creative · AI-assisted
+- **Films Included:**
+  - **Part 01** (landscape): https://reelandrank.com/media/films/film-01.mp4
+  - **Part 02** (landscape): https://reelandrank.com/media/films/film-02.mp4
+  - **Part 03** (landscape): https://reelandrank.com/media/films/film-03.mp4
+  - **Part 04** (landscape): https://reelandrank.com/media/films/film-04.mp4
+  - **Part 05** (landscape): https://reelandrank.com/media/films/film-05.mp4
+  - **Part 06** (landscape): https://reelandrank.com/media/films/film-06.mp4
+  - **Part 07** (landscape): https://reelandrank.com/media/films/film-07.mp4
+  - **Part 08** (landscape): https://reelandrank.com/media/films/film-08.mp4
+
+#### Autumn Cover Motion (2025)
+- **Category:** motion
+- **Hook:** A still product shot, given a season.
+- **Summary:** A motion treatment built on an autumn still life. Cinnamon moves through the frame, the light shifts and a flat product image becomes a piece that can carry a feed or a banner.
+- **Services Rendered:** Motion graphics, Product motion, Sound design
+- **Provenance Credit:** RamanRasa · founder-owned creative · AI-assisted
+- **Films Included:**
+  - **Autumn Cover** (landscape): https://reelandrank.com/media/motion/motion-01.mp4
+
+#### Fall Spice Reel (2025)
+- **Category:** film
+- **Hook:** Nine by sixteen, built for the scroll.
+- **Summary:** A vertical reel cut for social. Warm palette, fast rhythm and a hook that survives being watched with the sound off.
+- **Services Rendered:** Vertical film, Edit and grade, Social formats
+- **Provenance Credit:** RamanRasa · founder-owned creative · AI-assisted
+- **Films Included:**
+  - **Fall Spice** (portrait): https://reelandrank.com/media/motion/motion-02.mp4
+
+#### Brand Store Loop (2025)
+- **Category:** ad
+- **Hook:** A product page that keeps moving.
+- **Summary:** A fifteen-second loop made for a retail brand store. It has to read at a glance, work without sound and repeat without feeling like a repeat.
+- **Services Rendered:** 15-second advertisement, Retail loop, Format adaptation
+- **Provenance Credit:** RamanRasa · founder-owned creative · AI-assisted
+- **Films Included:**
+  - **Brand Store Loop** (landscape, 15s): https://reelandrank.com/media/motion/motion-03.mp4
+
+## 6. Team Roster & Specializations
+### Manny Singh (Founder)
+- **Focus:** Story, search strategy and career work
+- **Bio:** Founded Reel & Rank. Has worked for Salesforce, United Airlines, Banco Santander and Morgan Stanley, on government contracts and in logistics, and has led technology teams. Leads the search strategy and the 1-on-1 career work.
+
+### Motion and design (Motion and design)
+- **Focus:** Motion graphics, titles and visual systems
+- **Bio:** Shapes how the work moves: the rhythm of a set, the type that carries a message, and the details that make a frame feel considered.
+
+### Edit and finish (Edit and finish)
+- **Focus:** Edit, grade and sound
+- **Bio:** Puts the film together. Pacing, colour and sound, and the final pass that makes a cut feel finished rather than merely done.
+
+## 7. Studio Frequently Asked Questions (FAQ)
+### What actually happens in the first day?
+You send us the idea. We read it, ask anything that is unclear, and come back within one working day with an initial example you can react to. Full production, delivery dates and the final scope are agreed after we settle the direction together.
+
+### What does "refined until perfect" mean?
+For the $500 and $1,000 advertisement offers, we refine the agreed creative direction with your feedback until you are happy with the final result. We agree the brief and the deliverables at the start. If the concept or the scope changes, we discuss that together before it happens.
+
+### What does the search offer guarantee?
+We commit to delivering the strategy and the dashboard we agree on. We do not guarantee rankings, traffic, citations in AI answers or sales. Your starting priorities, how progress is measured and the deliverables are agreed on the call before work starts.
+
+### What does the $1,500 career package guarantee?
+Manny will keep working with you until you get a job, with ongoing consultations and strategy adjustments at no additional charge. That is the commitment. Hiring decisions stay with employers, so we do not guarantee a job offer or a salary.
+
+### Is the featured work from outside clients?
+No. The featured work is RamanRasa, founder Manny Singh's own brand. These are AI-assisted creative concepts, and we present them as founder-owned portfolio work rather than independent client testimonials or performance case studies.
+
+### Can you make something outside these offers?
+Yes. Bring the idea. Product ads, brand stories, explainers, social video, TV commercial creative or a custom project are all on the table. Any additional scope and price are agreed before work starts. TV airtime and media buying are separate.
+
+### Where are you, and who will I be talking to?
+Houston, Texas. We are a team of three, and you deal with the people making the work. Calls, shareable links and reviews, whichever suits you.
